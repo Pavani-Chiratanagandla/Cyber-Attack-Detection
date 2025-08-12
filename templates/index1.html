@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cyber Attack Detector</title>
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='images/index.webp') }}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;  
+        }
+
+        .form-container {
+            padding: 30px;
+            border-radius: 10px;
+            width: 320px;
+            margin-left: 20px; 
+            color: white;
+        }
+
+        label, input {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        input[type="submit"] {
+            padding: 10px;
+            background-color: #2196f3;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0b7dda;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Enter Flow Information</h2>
+        <form action="/predict" method="post">
+            <label>Flow Bytes per second:</label>
+            <input type="text" name="Flow_Bytes_per_second" required>
+
+            <label>Flow Packets per second:</label>
+            <input type="text" name="Flow_Packets_per_second" required>
+
+            <label>Fwd Packets per second:</label>
+            <input type="text" name="Fwd_Packets_per_second" required>
+
+            <label>ACK Flag Count:</label>
+            <input type="text" name="ACK_Flag_Count" required>
+
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+</html>

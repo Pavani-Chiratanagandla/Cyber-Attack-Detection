@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <style>
+        body {
+            background-image: url("{{ bg_image }}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; 
+        }
+
+        .result-box {
+            padding: 40px;
+            border-radius: 10px;
+            margin-left: 5px;
+            color: white;
+            text-align: left;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: #00bcd4;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <h1>{{ result }}</h1>
+        <a href="/">Back To Form</a>
+    </div>
+</body>
+</html>
